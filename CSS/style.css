@@ -1,0 +1,129 @@
+:root {
+    --border-w-1px: 1px solid rgba(255, 255, 255, 0.3);
+    --border-black-1px: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: black;
+    background-image: url("http://drive.google.com/uc?export=view&id=1hRqVID1BDQ5QQeRduVFI7YT25jFPxRBK");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: beige;
+    font-family: 'Architects Daughter', cursive
+}
+
+body::before {
+    position: absolute;
+    z-index: -50;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.651);
+}
+
+.head {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.336);
+    background-color: rgba(71, 9, 87, 0.63);
+    color: rgb(231, 225, 218);
+    text-shadow:0px 0px 12px rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: start;
+}
+
+.description>.txt_description {
+    padding: 10px 5px;
+    width: 190px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow:0px 0px 8px rgb(224, 224, 224, 0.8);
+    backdrop-filter: blur(1px);
+    border-radius: 3px;
+    border: var(--border-w-1px);
+    box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(255, 253, 253, 0.8);
+}
+
+.container>.card1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    height: 220px;
+}
+
+.container>.card1>#mainCanvas {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: var(--border-w-1px);
+    border-radius: 3px;
+    backdrop-filter: blur(1.2px);
+    user-select: none;
+    cursor: crosshair;
+    box-shadow: 0px 0px 14px 2px rgba(255, 255, 255, 0.8) inset;
+    -webkit-box-shadow: 0px 0px 14px 2px rgba(255, 255, 255, 0.8) inset;
+    -moz-box-shadow: 0px 0px 14px 2px rgba(255, 253, 253, 0.8) inset;
+}
+
+.container>.card1>#smallCanvas {
+    position: absolute;
+    right: 15%;
+    visibility: hidden;
+}
+
+.container>.buttons_canvas {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.container>.buttons_canvas>.btn_clear, .btn_prediction {
+    margin: 10px;
+    height: 40px;
+    width: 90px;
+    border: var(--border-w-1px);
+    border-radius: 5px;
+    box-shadow: 0px 0px 14px 2px rgba(255, 255, 255, 0.8) inset;
+    -webkit-box-shadow: 0px 0px 14px 2px rgba(255, 255, 255, 0.8) inset;
+    -moz-box-shadow: 0px 0px 14px 2px rgba(255, 253, 253, 0.8) inset;
+    background-color: rgba(0, 0, 0, 0.466);
+    color: beige;
+}
+
+.container>.buttons_canvas>.btn_clear:active, .btn_prediction:active {
+    box-shadow: 0px 0px 14px 2px rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: 0px 0px 14px 2px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 14px 2px rgba(255, 253, 253, 0.8);
+}
+
+.container>.prediction>#pathPrediction {
+    display: flex;
+    margin: 5px auto;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.349);
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+
+}
+
+.container>.prediction>#pathPrediction>#txtPrediction {
+    height: 70px;
+    width: 90px;
+    padding-top: 20px;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0px 0px 18px 10px rgba(255, 255, 255, 0.8) inset;
+    -webkit-box-shadow: 0px 0px 18px 10px rgba(255, 255, 255, 0.8) inset;
+    -moz-box-shadow: 0px 0px 18px 10px rgba(255, 253, 253, 0.8) inset;
+}
