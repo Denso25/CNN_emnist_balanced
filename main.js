@@ -53,7 +53,7 @@ function normalize28x28(matrix = []) {
 
 (async () => {
     console.log('Cargando modelo...')
-    model = await tf.loadLayersModel("./model_CNN_intermedio/model.json")
+    model = await tf.loadLayersModel("./model_CNN/model.json")
     console.log('Modelo cargado');
 })()
 

@@ -44,7 +44,7 @@ function getPosXY(canvasDom, event, lineWidth = 10) {
 const canvas = document.getElementById('mainCanvas')
 const ctx = canvas.getContext('2d')
 ctx.imageSmoothingEnable = true
-console.log(ctx);
+
 let startX = 0, startY = 0;
 let endX = 0, endY = 0;
 let drawing = false
