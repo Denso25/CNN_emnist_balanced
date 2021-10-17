@@ -108,22 +108,26 @@ body::before {
 
 .container>.prediction>#pathPrediction {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 5px auto;
-    justify-content: center;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.349);
     color: rgb(255, 255, 255);
-    font-size: 50px;
-
 }
 
 .container>.prediction>#pathPrediction>#txtPrediction {
     height: 70px;
     width: 90px;
+    font-family: "cursive";
+    font-size: 50px;
     padding-top: 20px;
     border-radius: 50%;
     text-align: center;
     box-shadow: 0px 0px 18px 10px rgba(255, 255, 255, 0.8) inset;
     -webkit-box-shadow: 0px 0px 18px 10px rgba(255, 255, 255, 0.8) inset;
     -moz-box-shadow: 0px 0px 18px 10px rgba(255, 253, 253, 0.8) inset;
+}
+.container>.prediction>#pathPrediction>.accuracy {
+    font-size: 25px;
 }
