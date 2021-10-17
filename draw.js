@@ -66,6 +66,7 @@ canvas.addEventListener('mousedown', (event) => {
 })
 
 canvas.addEventListener('touchstart', (event) => {
+    event.preventDefault()  
     const { x, y } = getPosXY(canvas, event, lineWidth)
     //Point as coordinate
     startX = x
