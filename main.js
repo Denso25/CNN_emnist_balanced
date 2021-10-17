@@ -28,15 +28,11 @@ btnPrediction.addEventListener('click', () => {
 
     }
     smallCtx.putImageData(imgPixels, 0, 0, 0, 0, 28, 28)
-    console.log(smallCtx.getImageData(0, 0, 28, 28));
-
     const imageData = normalize28x28(smallCtx.getImageData(0, 0, 28, 28).data)
-    console.log(imageData);
     const tensor4 = tf.tensor4d(imageData)
     const results = model.predict(tensor4).dataSync()
     const higherIndex = results.indexOf(Math.max.apply(null, results))
 
-    console.log('higherIndex:', class_names[higherIndex]);
     document.getElementById('txtPrediction').innerHTML = class_names[higherIndex]
 
 })
